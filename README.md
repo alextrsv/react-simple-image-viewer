@@ -1,8 +1,5 @@
 # React Simple Image Viewer
 
-[![npm version](https://badge.fury.io/js/react-simple-image-viewer.svg)](https://badge.fury.io/js/react-simple-image-viewer)
-[![Build Status](https://travis-ci.org/specter256/react-simple-image-viewer.svg?branch=master)](https://travis-ci.org/specter256/react-simple-image-viewer)
-
 Simple image viewer component for React.
 
 # Installation
@@ -61,6 +58,7 @@ function App() {
           currentIndex={ currentImage }
           disableScroll={ false }
           closeOnClickOutside={ true }
+          closeOnClickInside={ true }
           onClose={ closeImageViewer }
         />
       )}
@@ -70,24 +68,20 @@ function App() {
 
 render(<App />, document.getElementById('app'));
 ```
-
-# Demo
-
-[Try out demo on CodeSandbox](https://codesandbox.io/s/react-simple-image-viewer-demo-4itlr)
-
 # API
 
-| Property        |  Type     | Description                                                                       |
-| :-------------- | :-------- | :-------------------------------------------------------------------------------- |
-| src             | string[]  | Array of image URLs                                                               |
-| currentIndex    | number    | Index of image in `src` property which will be shown first when viewer is opened  |
-| onClose         | function  | Callback which will be called when viewer will closed                             |
-| backgroundStyle | object    | Custom styles for background of modal window                                      |
-| disableScroll   | boolean   | Disable scrolling images by mouse wheel                                           |
-| closeOnClickOutside   | boolean   | Whether viewer should be closed when clicking outside of image              |
-| closeComponent | JSX.Element | Custom component for the close button |
-| leftArrowComponent | JSX.Element | Custom component for the left arrow |
-| rightArrowComponent | JSX.Element | Custom component for the right arrow |
+| Property              |  Type         | Description                                                                       |
+| :--------------       | :--------     | :-------------------------------------------------------------------------------- |
+| src                   | string[]      | Array of image URLs                                                               |
+| currentIndex          | number        | Index of image in `src` property which will be shown first when viewer is opened  |
+| onClose               | function      | Callback which will be called when viewer will closed                             |
+| backgroundStyle       | object        | Custom styles for background of modal window                                      |
+| disableScroll         | boolean       | Disable scrolling images by mouse wheel                                           |
+| closeOnClickOutside   | boolean       | Whether viewer should be closed when clicking outside of image                    |
+| closeOnClickInside    | boolean       | Whether viewer should be closed when clicking inside image                        |
+| closeComponent        | JSX.Element   | Custom component for the close button                                             |
+| leftArrowComponent    | JSX.Element   | Custom component for the left arrow                                               |
+| rightArrowComponent   | JSX.Element   | Custom component for the right arrow                                              |
 
 # Shortcuts
 
@@ -97,3 +91,7 @@ render(<App />, document.getElementById('app'));
 | Right Arrow / l | Next image                      |
 | Left Arrow / h  | Previous image                  |
 | Mouse wheel     | Scrolling previous / next image |
+
+# References to original repository
+
+[Github Repository](https://github.com/specter256/react-simple-image-viewer)
